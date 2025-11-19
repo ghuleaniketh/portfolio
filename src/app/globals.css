@@ -1,26 +1,50 @@
-@import "tailwindcss";
+	/* Import Istok Web and other fonts from Google Fonts and set Istok Web as the global font
+	   Note: using the Google Fonts stylesheet here is the simplest approach.
+	*/
+	@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@300;400;600;700&display=swap');
+	/* Keep Poller One and Poppins available as fallbacks/scoped fonts */
+	@import url('https://fonts.googleapis.com/css2?family=Poller+One&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+
+	/* Full-screen background image utility
+	   Usage: add className="full-screen-img" to an <img> element.
+	   The image is positioned fixed and covers the viewport using object-fit: cover.
+	*/
+	/* Reset and base fixes to avoid default white margins/gaps */
+html, body, #__next {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+	/* Apply Istok Web as the primary UI font for the whole app */
+	body {
+		font-family: 'Istok Web', 'Poppins', 'Poller One', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	}
+
+
+
+.full-screen-img {
+	position: fixed;
+	inset: 0; /* top:0; right:0; bottom:0; left:0 */
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	z-index: -1; /* keep behind page content */
+	display: block; /* avoid inline-img whitespace */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* If you want page content centered above the image */
+.hero-content {
+	position: relative;
+	z-index: 1;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
