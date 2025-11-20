@@ -32,3 +32,8 @@
     font-size: clamp(12px,2vw,18px);
     text-decoration: none;
 }
+
+/* Use Istok Web for navigation labels */
+.navbar, .navbar * {
+    font-family: 'Istok Web', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}

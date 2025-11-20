@@ -1,12 +1,11 @@
-	/* Import Istok Web and other fonts from Google Fonts and set Istok Web as the global font
+	/* Import Poller One from Google Fonts and set it as the global font
 	   Note: using the Google Fonts stylesheet here is the simplest approach.
 	*/
-	@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@300;400;600;700&display=swap');
-	/* Keep Poller One and Poppins available as fallbacks/scoped fonts */
 	@import url('https://fonts.googleapis.com/css2?family=Poller+One&display=swap');
+	/* Add Poppins for scoped use (Developer label) */
 	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-
+	/* Istok Web used for navigation display */
+	@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@300;400;600;700&display=swap');
 
 	/* Full-screen background image utility
 	   Usage: add className="full-screen-img" to an <img> element.
@@ -21,9 +20,9 @@ html, body, #__next {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-	/* Apply Istok Web as the primary UI font for the whole app */
+	/* Apply Poller One as the primary UI font for the whole app */
 	body {
-		font-family: 'Istok Web', 'Poppins', 'Poller One', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+		font-family: 'Poller One', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 	}
 
 
