@@ -1,0 +1,23 @@
+/* Styles for GitHubCalendarSection component (replaces Tailwind utilities) */
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.heading {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.calendarWrap {
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+

@@ -4,7 +4,7 @@ import Nav from '@/components/nav';
 import AboutMePage from  "./aboutme";
 import LiquidEther from '@/components/LiquidEther';
 import Projects from './projects';
-
+import Skills from './skills';
 
 export default function HomePage(){
     return (
@@ -53,6 +53,7 @@ export default function HomePage(){
       </div>
       <AboutMePage />
       <Projects />
+      <Skills/>
         </> 
     )
 };

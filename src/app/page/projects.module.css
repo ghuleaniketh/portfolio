@@ -6,6 +6,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
 }
 
 .heading{
