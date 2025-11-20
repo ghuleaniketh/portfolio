@@ -1,7 +1,6 @@
 import Styles from "./skills.module.css";
-import dynamic from 'next/dynamic';
-const GitHubCalendarSection = dynamic(() => import('@/components/GitHubCalendarSection'), { ssr: false });
-const PixelCard = dynamic(() => import('@/components/PixelCard'), { ssr: false });
+import GitHubCalendarSection from '@/components/GitHubCalendarSection';
+import PixelCard from '@/components/PixelCard';
 import { color } from "motion";
 
 

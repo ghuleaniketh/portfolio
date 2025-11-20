@@ -360,6 +360,7 @@
     /* Home Section */
     .someClass {
         align-items: end;
+        height: 80%;
     }
     
     .midContent {

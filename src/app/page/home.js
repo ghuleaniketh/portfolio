@@ -2,8 +2,7 @@ import React from 'react';
 import Style from './home.module.css';
 import Nav from '@/components/nav';
 import AboutMePage from  "./aboutme";
-import dynamic from 'next/dynamic';
-const LiquidEther = dynamic(() => import('@/components/LiquidEther'), { ssr: false });
+import LiquidEtherClient from '@/components/LiquidEtherClient';
 import Projects from './projects';
 import Skills from './skills';
 
@@ -25,7 +24,7 @@ export default function HomePage(){
           zIndex: 1,
           pointerEvents: 'none'
         }}>
-          <LiquidEther
+          <LiquidEtherClient
             colors={['#000000ff', '#a52b2bff', '#f9f06b']}
             mouseForce={20}
             cursorSize={100}
