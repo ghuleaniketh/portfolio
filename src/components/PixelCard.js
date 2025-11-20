@@ -1,6 +1,6 @@
 
 "use client";
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './PixelCard.css';
 
 class Pixel {
@@ -129,8 +129,29 @@ export default function PixelCard({ variant = 'default', gap, speed, colors, noF
   const canvasRef = useRef(null);
   const pixelsRef = useRef([]);
   const animationRef = useRef(null);
-  const timePreviousRef = useRef(performance.now());
-  const reducedMotion = useRef(window.matchMedia('(prefers-reduced-motion: reduce)').matches).current;
+  const timePreviousRef = useRef(typeof performance !== 'undefined' ? performance.now() : Date.now());
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') return;
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    // set initial value
+    setReducedMotion(mq.matches);
+    // listen for changes
+    const handleChange = (e) => setReducedMotion(e.matches);
+    if (mq.addEventListener) {
+      mq.addEventListener('change', handleChange);
+    } else if (mq.addListener) {
+      mq.addListener(handleChange);
+    }
+    return () => {
+      if (mq.removeEventListener) {
+        mq.removeEventListener('change', handleChange);
+      } else if (mq.removeListener) {
+        mq.removeListener(handleChange);
+      }
+    };
+  }, []);
 
   const variantCfg = VARIANTS[variant] || VARIANTS.default;
   const finalGap = gap ?? variantCfg.gap;
