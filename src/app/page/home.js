@@ -2,7 +2,8 @@ import React from 'react';
 import Style from './home.module.css';
 import Nav from '@/components/nav';
 import AboutMePage from  "./aboutme";
-import LiquidEther from '@/components/LiquidEther';
+import dynamic from 'next/dynamic';
+const LiquidEther = dynamic(() => import('@/components/LiquidEther'), { ssr: false });
 import Projects from './projects';
 import Skills from './skills';
 
