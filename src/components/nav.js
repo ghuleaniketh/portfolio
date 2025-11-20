@@ -10,7 +10,9 @@ export default function Nav(){
         if (el) {
             el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         } else {
-            window.scrollBy({ top: 1900, behavior: 'smooth' });
+            if (typeof window !== 'undefined') {
+                window.scrollBy({ top: 1900, behavior: 'smooth' });
+            }
         }
     };
 
