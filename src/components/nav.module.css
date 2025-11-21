@@ -15,7 +15,7 @@
 
 .name{
     color: rgb(0, 0, 0);
-    font-size: clamp(17px,2vw,30px);
+    font-size: clamp(10px,2vw,30px);
     font-weight: bold;
     flex-grow: 1;
     margin-left: clamp(10px,2vw,50px);

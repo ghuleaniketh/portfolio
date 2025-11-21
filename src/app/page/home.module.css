@@ -358,6 +358,10 @@
 /* Mobile Screens */
 @media (max-width: 480px) {
     /* Home Section */
+
+    .Aboutme{
+        height: 120vh;
+    }
     .someClass {
         align-items: end;
         height: 80%;
@@ -411,13 +415,21 @@
     
     .boxA {
         width: 100%;
-        height: 50%;
+        height: 40%;
     }
     .aboutmediv{
         width: 100%
     }
     .aboutmetext{
         font-size: 25px;
+    }
+    .boxAtext > div > h1{
+        font-size: 12px;
+
+    }
+    .boxAtext > div > p{
+        font-size: 10px;
+        text-align: justify;
     }
     .boxAcontent{
         height: 70%;
@@ -441,10 +453,24 @@
     .boxB {
         flex-direction: row;
         width: 100%;
-        height: 50%;
+        height: 60%;
     }
     
-    .boxB div {
-        height: 100%;
+    .boxB > div {
+        height: 80%;
+        width: 95%;
+        gap: 30px;
+    }
+
+    .boxBa, .boxBb {
+        width: 95%;
+        border-bottom: none;
+    }
+    .boxBaList , .boxBbList{
+        font-size: 10px;
+    }
+
+    .boxBbTitle, .boxBaTitle{
+        font-size: 12px;
     }
 }
