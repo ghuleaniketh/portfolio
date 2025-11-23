@@ -149,6 +149,10 @@
     z-index: 1;
 }
 
+.downdiv > div{
+    height: 100%;
+    width: 100%;
+}
 @media (max-width: 480px) {
     .updiv{
         height: 70%;
@@ -160,7 +164,7 @@
         padding: 0 12px;
         box-sizing: border-box;
         flex-direction: column;
-        gap: 150px;
+        gap: 140px;
         justify-content: space-evenly;
     }
 

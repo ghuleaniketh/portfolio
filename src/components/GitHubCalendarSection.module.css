@@ -1,26 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 .wrapper {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0.5rem 0;
+  margin-top: 50px;
 }
 
 .heading {
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin: 0.5rem 0;
   color: #fff;
   font-family: 'VT323', monospace;
 }
 
 .calendarWrap {
   width: 100%;
-  height: 100%;
+  max-width: 900px;
+  padding: 0.5rem;
+  border-radius: 8px;
   color: white;
-
+  font-size: 32px;
   font-family: 'VT323', monospace;
+
+  /* keep everything inside */
+  overflow: hidden;
+
+  /* ✔ center the calendar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Base SVG style */
+.calendarWrap svg {
+  width: 100%;
+  height: auto;
+  transform-origin: top center; /* important for centering when scaling */
+}
+
+/* 🔥 Scale down on mobile */
+@media (max-width: 600px) {
+  .calendarWrap svg {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 400px) {
+  .calendarWrap svg {
+    transform: scale(0.65);
+  }
+}
