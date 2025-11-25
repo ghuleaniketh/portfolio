@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "./nav.module.css";
+import Link from "next/link";
 
 
 export default function Nav(){
@@ -23,9 +24,15 @@ export default function Nav(){
                     <p className={styles.name}>Ghule Aniketh</p>
                 </div>
                 <div className={styles.links}>
-                    <a className={styles.a} href="#gallery">gallery</a>
-                    <a className={styles.a} href="#projects" onClick={scrollToProjects}>Projects</a>
-                    <a className={styles.a} href="#contact">Contact</a>
+                    <Link href="/gallery" className={styles.sidebarLink}>
+                    Gallery
+                    </Link>
+                    <Link href="#projects" onClick={scrollToProjects }className={styles.sidebarLink}>
+                    Projects
+                    </Link>
+                    <Link href="#" className={styles.sidebarLink}>
+                    Contact
+                    </Link>
                 </div>
             </div>
         </>

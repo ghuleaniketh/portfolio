@@ -21,7 +21,7 @@
     margin-left: clamp(10px,2vw,50px);
 }
 
-.links{
+.a{
     text-decoration: none;
     display: flex;
     gap: clamp(15px, 2vw, 20px);
@@ -31,6 +31,16 @@
     color: rgb(0, 0, 0);
     font-size: clamp(12px,2vw,18px);
     text-decoration: none;
+}
+
+/* New sidebar Link style for Next.js Link components */
+.sidebarLink{
+    color: #000;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background-color 180ms ease, color 180ms ease, transform 120ms ease;
+    display: inline-block;
 }
 
 /* Use Istok Web for navigation labels */
