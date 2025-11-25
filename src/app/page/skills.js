@@ -1,3 +1,4 @@
+"use client"
 import Styles from "./skills.module.css";
 import GitHubCalendarSection from '@/components/GitHubCalendarSection';
 import PixelCard from '@/components/PixelCard';
@@ -7,6 +8,10 @@ import { color } from "motion";
 
 
 export default function Skills(){
+
+    function handleGitHubClick() {
+        window.open('https://github.com/ghuleaniketh');
+    }
     return(
         <div className={Styles.skills}>
             <div className={Styles.updiv}>
@@ -52,7 +57,7 @@ export default function Skills(){
                     </div>
                     <div className={Styles.up} id={Styles.upb}>
                         <h1>Git Hub</h1>
-                        <div className={Styles.githubcontain}>
+                        <div onClick={handleGitHubClick} className={Styles.githubcontain}>
                             <PixelCard className={Styles.card2} variant="blue"></PixelCard>
                             <div className={Styles.demo}>
                                 <img src="https://streak-stats.demolab.com/?user=ghuleaniketh&theme=tokyonight" alt="GitHub Demo" />
