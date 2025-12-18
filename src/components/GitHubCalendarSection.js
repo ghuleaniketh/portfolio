@@ -12,7 +12,7 @@ export default function GitHubCalendarSection() {
 
       <div className={styles.calendarWrap}>
         <GitHubCalendar
-          username="pavan"
+          username="ghuleaniketh"
           blockSize={20}
           blockMargin={5}
           fontSize={16}
