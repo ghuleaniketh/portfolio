@@ -3,7 +3,6 @@
 import Styles from './gallery.module.css';
 
 export default function GalleryPage(){
-        // placeholder images — replace with your project/gallery images
         
 
         return(

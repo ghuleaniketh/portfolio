@@ -8,6 +8,7 @@
     align-items: center;
     border-top: 5px solid white;
     border-bottom: 5px solid white;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .heading{
@@ -28,6 +29,7 @@
     position: relative; /* contain edge overlays */
     /* allow overlays to sit above the inner content */
     overflow: visible;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 /* Left and right fade overlays to softly mask edges of the content */

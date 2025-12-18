@@ -14,7 +14,7 @@
   font-weight: 700;
   margin: 0.5rem 0;
   color: #fff;
-  font-family: 'VT323', monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .calendarWrap {
@@ -24,7 +24,7 @@
   border-radius: 8px;
   color: white;
   font-size: 32px;
-  font-family: 'VT323', monospace;
+  font-family: 'Courier New', Courier, monospace;
 
   /* keep everything inside */
   overflow: hidden;

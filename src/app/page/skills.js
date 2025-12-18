@@ -2,16 +2,21 @@
 import Styles from "./skills.module.css";
 import GitHubCalendarSection from '@/components/GitHubCalendarSection';
 import PixelCard from '@/components/PixelCard';
-import { color } from "motion";
+import { useState ,useEffect } from "react";
 
 
 
 
 export default function Skills(){
+    const [gitHubStatsUrl, setGitHubStatsUrl] = useState("ntg");
+    
 
     function handleGitHubClick() {
         window.open('https://github.com/ghuleaniketh');
     }
+
+        
+     
     return(
         <div className={Styles.skills}>
             <div className={Styles.updiv}>
@@ -60,7 +65,7 @@ export default function Skills(){
                         <div onClick={handleGitHubClick} className={Styles.githubcontain}>
                             <PixelCard className={Styles.card2} variant="blue"></PixelCard>
                             <div className={Styles.demo}>
-                                <img src="https://streak-stats.demolab.com/?user=ghuleaniketh&theme=tokyonight" alt="GitHub Demo" />
+                                <img src="https://streak-stats.demolab.com/?user=ghuleaniketh&theme=tokyonight" alt="/github.png" />
                             </div>
                             
                         </div>
@@ -77,3 +82,4 @@ export default function Skills(){
         </div>
     )
 }
+// 
