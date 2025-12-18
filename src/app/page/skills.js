@@ -65,7 +65,13 @@ export default function Skills(){
                         <div onClick={handleGitHubClick} className={Styles.githubcontain}>
                             <PixelCard className={Styles.card2} variant="blue"></PixelCard>
                             <div className={Styles.demo}>
-                                <img src="https://streak-stats.demolab.com/?user=ghuleaniketh&theme=tokyonight" alt="/github.png" />
+                                <img src="https://streak-stats.demolab.com/?user=ghuleaniketh&theme=tokyonight" 
+                                alt="/github.png" 
+                                onError={(e)=>{
+                                    e.target.onerror = null;
+                                    e.target.src = "/github.png";
+                                }}
+                                />
                             </div>
                             
                         </div>
