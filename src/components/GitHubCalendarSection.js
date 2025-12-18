@@ -9,6 +9,7 @@ export default function GitHubCalendarSection() {
     <div className={styles.wrapper}>
       <h2 className={styles.heading}>GitHub Contributions</h2>
 
+
       <div className={styles.calendarWrap}>
         <GitHubCalendar
           username="pavan"
