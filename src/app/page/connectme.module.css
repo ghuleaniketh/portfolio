@@ -165,4 +165,7 @@
     .right {
         padding: 30px 20px;
     }
+    .contactForm{
+        width: 100%;
+    }
 }
