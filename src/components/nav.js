@@ -15,6 +15,20 @@ export default function Nav(){
         }
     };
 
+
+    const scrollToProjects2 = (e) => {
+        e.preventDefault();
+        const el = document.getElementById('contact');
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            if (typeof window !== 'undefined') {
+                window.scrollBy({ top: 5000, behavior: 'smooth' });
+            }
+        }
+        
+    };
+
     return (
         <>
             <div className={styles.navbar}>
@@ -28,7 +42,7 @@ export default function Nav(){
                     <Link href="#projects" onClick={scrollToProjects} className={styles.sidebarLink}>
                     Projects
                     </Link>
-                    <Link href="#" className={styles.sidebarLink}>
+                    <Link href="#contact" onClick={scrollToProjects2} className={styles.sidebarLink}>
                     Contact
                     </Link>
                 </div>

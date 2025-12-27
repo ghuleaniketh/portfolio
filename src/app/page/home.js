@@ -5,6 +5,7 @@ import AboutMePage from  "./aboutme";
 import LiquidEtherClient from '@/components/LiquidEtherClient';
 import Projects from './projects';
 import Skills from './skills';
+import ConnectMePage from './connectme'
 
 export default function HomePage(){
     return (
@@ -54,6 +55,7 @@ export default function HomePage(){
       <AboutMePage />
       <Projects />
       <Skills/>
+      <ConnectMePage />
         </> 
     )
 };
