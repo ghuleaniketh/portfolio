@@ -168,6 +168,7 @@
     border-radius: 12px;
     box-shadow: 5px 5px 50px rgba(0, 0, 0, 1);
     display: flex;
+    text-align: justify;
     flex-direction: column;
 }
 
@@ -323,6 +324,7 @@
         border-radius: 50% 50% 0 0;
     }
     
+/* Small Screens (Tablets) */
     .I {
         left: 30%;
     }
@@ -332,7 +334,6 @@
     }
 }
 
-/* Small Screens (Tablets) */
 @media (max-width: 768px) {
     .midContent {
         height: clamp(400px, 60vh, 560px);
@@ -440,6 +441,9 @@
         height: 100%;
         width: 100%;
         flex-direction: row;
+        padding-bottom: 0px ;
+
+        background-color: red;
     }
     .boxAtext div{
         width: 50%;

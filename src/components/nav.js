@@ -1,8 +1,6 @@
 "use client";
-
 import styles from "./nav.module.css";
 import Link from "next/link";
-
 
 export default function Nav(){
     const scrollToProjects = (e) => {
@@ -27,7 +25,7 @@ export default function Nav(){
                     <Link href="/gallery" className={styles.sidebarLink}>
                     Gallery
                     </Link>
-                    <Link href="#projects" onClick={scrollToProjects }className={styles.sidebarLink}>
+                    <Link href="#projects" onClick={scrollToProjects} className={styles.sidebarLink}>
                     Projects
                     </Link>
                     <Link href="#" className={styles.sidebarLink}>

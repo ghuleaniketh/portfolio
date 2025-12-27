@@ -3,7 +3,7 @@
     height: 60px;
     background-color: #333;
     display: flex;
-    gap: clamp(85px,2vw,20px);
+    justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
@@ -18,16 +18,17 @@
 }
 .name{
     color: rgb(0, 0, 0);
-    font-size: clamp(10px,2vw,25px);
+    font-size: clamp(16px, 3vw, 32px);
     font-weight: bold;
-    flex-grow: 1;
     margin-left: clamp(10px,2vw,45px);
+    white-space: nowrap;
 }
 
-.a{
-    text-decoration: none;
+.links {
+    padding-right: 40px;
     display: flex;
-    gap: clamp(15px, 2vw, 20px);
+    gap: clamp(10px, 1.vw, 25px);
+    align-items: center;
 }
 
 .a{
@@ -44,9 +45,17 @@
     border-radius: 8px;
     transition: background-color 180ms ease, color 180ms ease, transform 120ms ease;
     display: inline-block;
+    font-size: clamp(12px,2vw,18px);
 }
+
 
 /* Use Istok Web for navigation labels */
 .navbar, .navbar * {
     font-family: 'Istok Web', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+@media (max-width: 600px){
+    .links{
+        padding-right: 0px;
+    }
 }
