@@ -8,6 +8,7 @@ export default function GalleryPage(){
         return(
                 <div className={Styles.container}>
                         <h1 className={Styles.heading}>Gallery</h1>
+                        <p>WOrking on it</p>
                 </div>
         );
 
