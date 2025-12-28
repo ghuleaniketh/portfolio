@@ -4,11 +4,11 @@ import Stack from '@/components/Stack';
 export default function AboutMePage(){
 
     const images = [
-  { id: 1, img: "/pic/pics5.jpg" },
-  { id: 2, img: "/pic/pics2.jpg" },
-  { id: 3, img: "/pic/pics3.jpg" },
-  { id: 4, img: "/pic/pics4.jpg" },
-  { id: 5, img: "/pic/pics1.jpg" },
+  { id: 1, img: "/pic/pic5.jpg" },
+  { id: 2, img: "/pic/pic2.jpg" },
+  { id: 3, img: "/pic/pic3.jpg" },
+  { id: 4, img: "/pic/pic4.jpg" },
+  { id: 5, img: "/pic/pic1.jpg" },
 ];
     return(
         <> 
