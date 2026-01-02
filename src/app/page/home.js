@@ -45,7 +45,7 @@ export default function HomePage(){
         </div>
         
         <div className={Style.midContent}>
-          <img className={Style.profile} src="/aniketh.png" alt="Profile" />
+          <img className={Style.profile} src="https://res.cloudinary.com/dethahoug/image/upload/v1767374893/aniketh_buzjdv.png" alt="Profile" />
           <p className={Style.I}>I'm</p>
           <p className={Style.a}>a</p>
           <p className={Style.Developer}>Developer</p>
