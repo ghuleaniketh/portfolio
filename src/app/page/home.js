@@ -6,10 +6,12 @@ import LiquidEtherClient from '@/components/LiquidEtherClient';
 import Projects from './projects';
 import Skills from './skills';
 import ConnectMePage from './connectme'
+import Cursor from '@/components/cursor';
 
 export default function HomePage(){
     return (
         <>
+        <Cursor />
         <Nav />
         
           {/* <img src="/background.png" alt="Background" className={Style.background} /> */}

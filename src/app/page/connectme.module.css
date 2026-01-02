@@ -134,6 +134,15 @@
     color: #BAB9AF;
 }
 
+.avatar{
+    height: 100px;
+    background-color: #BAB9AF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
     .connectMeSection {

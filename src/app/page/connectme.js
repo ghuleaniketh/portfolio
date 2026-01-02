@@ -3,6 +3,7 @@ import style from './connectme.module.css';
 import Link from 'next/link';
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 import { useState } from 'react';
+import Avatar from '@/components/avatar';
 
 export default function ConnectMePage() {
 
@@ -38,7 +39,11 @@ const [result, setResult] = useState("");
 
     return(
         <>
+        <div className={style.avatar}>
+                <Avatar/>
+            </div>
         <div className={style.connectMeSection}>
+            
             <div className={style.left}>
                 <h2>Connect With Me</h2>
                 <div className={style.socialLinks}>

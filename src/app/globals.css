@@ -47,3 +47,13 @@ html, body, #__next {
 	align-items: center;
 	justify-content: center;
 }
+
+	/* Hide cursor globally but allow inputs/buttons to behave normally */
+	* {
+		cursor: none !important;
+	}
+
+	/* Allow pointer for interactive controls so forms remain usable */
+	input, textarea, select, button, a {
+		cursor: auto !important;
+	}

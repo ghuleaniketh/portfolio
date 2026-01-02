@@ -1,5 +1,6 @@
 import Masonry from '@/components/Masonry';
 import style from './gallery.module.css';
+import Cursor from '@/components/cursor';
 
 const items = [
     {
@@ -63,6 +64,7 @@ const items = [
 export default function GalleryPage() {
     return (
         <div className={style.container}>
+            <Cursor />
             <h1 className={style.heading}>Gallery</h1>
             <div className={style.masonry}>
                   <Masonry
