@@ -54,7 +54,7 @@ export default function Avatar(){
             if(model){
             const rotationX = (e.clientX/window.innerWidth - 0.5) * Math.PI  ;
             const rotationY = (e.clientY/window.innerHeight - 0.5) * Math.PI;
-            console.log(`x = ${rotationX}__y = ${rotationY}`);
+            // console.log(`x = ${rotationX}__y = ${rotationY}`);
             // model.rotation.x = rotationY;
             // model.rotation.y = rotationX;
 
