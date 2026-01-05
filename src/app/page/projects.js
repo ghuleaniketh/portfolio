@@ -19,7 +19,7 @@ const demoItems = [
                 <h1>Projects</h1>
             </div>
             <div className={Style.content}>
-                <div style={{ height: '600px', position: 'relative' }}>
+                <div style={{ height: '600px', position: 'relative' ,cursor:"none"}}>
                     <FlowingMenu items={demoItems} />
                 </div>
             </div>

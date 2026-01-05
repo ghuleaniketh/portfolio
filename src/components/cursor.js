@@ -1,10 +1,11 @@
 'use client';
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import styles from './cursor.module.css'
 
 export default function Cursor() {
     const cursorRef = useRef(null);
-    const SIZE = 25;
+    const SIZE = 20;
 
     useEffect(() => {
         const el = cursorRef.current;
@@ -12,9 +13,9 @@ export default function Cursor() {
 
         const onMove = (e) => {
             gsap.to(el, {
-                x: e.clientX - SIZE / 2,
+                x: e.clientX - SIZE+70 / 2,
                 y: e.clientY - SIZE / 2,
-                duration: 0.05,
+                duration: 0,
                 ease: "power2.out",
                 overwrite: true,
             });
@@ -29,20 +30,22 @@ export default function Cursor() {
 
     return (
         <div
+            className={styles.cursor}
             ref={cursorRef}
             style={{
                 height: SIZE,
                 width: SIZE,
-                backgroundColor: "white",
-                border: "2px solid black",
+                backgroundColor: "none",
                 opacity: 0.8,
                 borderRadius: "50%",
                 position: "fixed",
-                left: 0,
+                left: "-25px",
                 top: 0,
                 pointerEvents: "none",
                 zIndex: 9999,
             }}
-        />
+        >
+            <div className={styles.center}></div> 
+        </div>
     );
 }

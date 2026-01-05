@@ -1,0 +1,17 @@
+.cursor{
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top:2px solid transparent;
+    border-bottom:2px solid transparent ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center{
+    height: 2px;
+    width: 2px;
+    border: 1px solid black;
+    border-radius: 50%;
+
+}
