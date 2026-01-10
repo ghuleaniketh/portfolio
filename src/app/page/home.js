@@ -33,7 +33,7 @@ export default function HomePage(){
       const width = window.innerWidth;
       console.log(width);
 
-      if (img.current) {
+      if (width > 768) {
         window.requestAnimationFrame(() => {
           const invertX = -x;
           const invertY = -y; 
