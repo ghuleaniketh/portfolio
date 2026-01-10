@@ -30,6 +30,9 @@ export default function HomePage(){
       const y = (e.clientY/window.innerWidth)*100 - 50;
       console.log(x, y);
 
+      const width = window.innerWidth;
+      console.log(width);
+
       if (img.current) {
         window.requestAnimationFrame(() => {
           const invertX = -x;
@@ -48,13 +51,6 @@ export default function HomePage(){
           // developer.current.style.transform = `translate(${tx * 0.6}px, ${ty * 0.6}px) )`;
         });
       }
-      back
-
-      // const background = document.querySelector(`.${Style.background}`);
-      // console.log(background);
-      // if (background) {
-        // background.style.transform = `translate(${x * 0.02}px, ${y * 0.02}px)`;
-      // }
     });
   }, []);
     return (
@@ -62,10 +58,8 @@ export default function HomePage(){
         <Cursor />
         <Nav />
         
-          {/* <img src="/background.png" alt="Background" className={Style.background} /> */}
       <div className={Style.someClass} style={{ position: 'relative' }}>
         
-        {/* LiquidEther Background Effect - between someClass and midContent */}
         <div style={{ 
           position: 'absolute', 
           top: 0, 
