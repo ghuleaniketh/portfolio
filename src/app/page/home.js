@@ -1,7 +1,8 @@
 'use client';
 
 import React, { use } from 'react';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
 import Style from './home.module.css';
 import Nav from '@/components/nav';
 import AboutMePage from  "./aboutme";
@@ -10,7 +11,6 @@ import Projects from './projects';
 import Skills from './skills';
 import ConnectMePage from './connectme'
 import Cursor from '@/components/cursor';
-import { useRef} from 'react';
 
 export default function HomePage(){
 
@@ -21,43 +21,57 @@ export default function HomePage(){
   const developer = useRef(null);
   const developer2 = useRef(null);
 
-
-
   useEffect(() => {
-    
-    window.addEventListener('mousemove', (e) => {
-      const x = (e.clientX/window.innerWidth)*100 - 50;
-      const y = (e.clientY/window.innerWidth)*100 - 50;
-      console.log(x, y);
+    const handleMouseMove = (e) => {
+      const x = (e.clientX / window.innerWidth) * 100 - 50;
+      const y = (e.clientY / window.innerHeight) * 100 - 50;
 
       const width = window.innerWidth;
-      console.log(width);
 
       if (width > 768) {
-        window.requestAnimationFrame(() => {
-          const invertX = -x;
-          const invertY = -y; 
+        const invertX = -x;
+        const invertY = -y;
 
-          const tx = invertX * 1.2; 
-          const ty = invertY * 1.2; 
+        const tx = invertX * 1.2;
+        const ty = invertY * 1.2;
 
-          img.current.style = ` translate:${x}px ${y}px; )`;
-          developer.current.style = ` translate:${tx}px ${ty}px; )`;
-          developer2.current.style = ` translate:${tx}px ${ty}px; )`;
-          iamA.current.style = ` translate:${x*0.3}px ${y*0.3}px; )`;
-          iamA2.current.style = ` translate:${x*0.3}px ${y*0.3}px; )`;
+        // Use GSAP for smooth animations
+        gsap.to(img.current, {
+          x: x,
+          y: y,
+          duration: 0.8,
+          ease: "power2.out"
+        });
 
-          // iamA.current.style.transform = `translate(${tx * 0.8}px, ${ty * 0.8}px) )`;
-          // developer.current.style.transform = `translate(${tx * 0.6}px, ${ty * 0.6}px) )`;
+        gsap.to([developer.current, developer2.current], {
+          x: tx,
+          y: ty,
+          duration: 0.9,
+          ease: "power2.out"
+        });
+
+        gsap.to([iamA.current, iamA2.current], {
+          x: x * 0.3,
+          y: y * 0.3,
+          duration: 1,
+          ease: "power2.out"
         });
       }
-    });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
   }, []);
-    return (
-        <>
-        <Cursor />
-        <Nav />
-        
+
+  return (
+    <>
+      <Cursor />
+      <Nav />
+      
       <div className={Style.someClass} style={{ position: 'relative' }}>
         
         <div style={{ 
@@ -89,7 +103,7 @@ export default function HomePage(){
         </div>
         
         <div className={Style.midContent}>
-          <img   ref={img} className={Style.profile} src="https://res.cloudinary.com/dethahoug/image/upload/v1767374893/aniketh_buzjdv.png" alt="Profile" />
+          <img ref={img} className={Style.profile} src="https://res.cloudinary.com/dethahoug/image/upload/v1767374893/aniketh_buzjdv.png" alt="Profile" />
           <p ref={iamA} className={Style.I}>I'm</p>
           <p ref={iamA2} className={Style.a}>a</p>
           <p ref={developer} className={Style.Developer}>Developer</p>
@@ -100,6 +114,6 @@ export default function HomePage(){
       <Projects />
       <Skills/>
       <ConnectMePage />
-        </> 
-    )
+    </> 
+  )
 };
