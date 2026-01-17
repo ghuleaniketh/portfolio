@@ -10,6 +10,8 @@ import LiquidEtherClient from '@/components/LiquidEther';
 export default function HomePage(){
 
 
+  
+
   const backgroundRef = useRef(null);
   const img = useRef(null);
   const iamA = useRef(null);
