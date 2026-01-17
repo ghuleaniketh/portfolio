@@ -45,7 +45,6 @@ export default function Cursor() {
                 zIndex: 9999,
             }}
         >
-            <div className={styles.center}></div> 
         </div>
     );
 }

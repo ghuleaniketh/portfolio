@@ -5,14 +5,10 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import Style from './home.module.css';
 import Nav from '@/components/nav';
-import AboutMePage from  "./aboutme";
-import LiquidEtherClient from '@/components/LiquidEtherClient';
-import Projects from './projects';
-import Skills from './skills';
-import ConnectMePage from './connectme'
-import Cursor from '@/components/cursor';
+import LiquidEtherClient from '@/components/LiquidEther';
 
 export default function HomePage(){
+
 
   const backgroundRef = useRef(null);
   const img = useRef(null);
@@ -67,10 +63,10 @@ export default function HomePage(){
     };
   }, []);
 
-  return (
+
+  return(
     <>
-      <Cursor />
-      <Nav />
+          <Nav />
       
       <div className={Style.someClass} style={{ position: 'relative' }}>
         
@@ -110,10 +106,6 @@ export default function HomePage(){
           <p ref={developer2} className={Style.Developer2}>Developer</p>
         </div>
       </div>
-      <AboutMePage />
-      <Projects />
-      <Skills/>
-      <ConnectMePage />
-    </> 
+    </>
   )
-};
+}
